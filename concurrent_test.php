@@ -21,7 +21,7 @@ function concurrent_test($processes = 10) {
             continue;
         } else {
             // 子进程
-            $finder = new IpShow('ip.bin');
+            $finder = new IpShow();
             foreach ($ips as $ip) {
                 $result = $finder->find($ip);
                 echo "进程 " . getmypid() . " 查询IP: {$ip} 结果: " . 

@@ -6,13 +6,14 @@ class IpShow {
     private $totalIps;
     private $indexCache = [];
     private $debug = false;
+    private const IP_DATA_FILE = __DIR__ . '/ip.bin';
     
-    public function __construct($binFile) {
-        $this->fp = fopen($binFile, 'rb');
+    public function __construct() {
+        $this->fp = fopen(self::IP_DATA_FILE, 'rb');
         if (!$this->fp) {
-            throw new \Exception("Cannot open file: " . $binFile);
+            throw new \Exception("Cannot open IP database file");
         }
-        $fileSize = filesize($binFile);
+        $fileSize = filesize(self::IP_DATA_FILE);
         $this->totalIps = floor($fileSize / 14);
         
         // 建立内存索引

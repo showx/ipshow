@@ -21,8 +21,17 @@ composer require ipshow/ipshow
 ## 使用方法
 
 ```php
-- use Ipshow\IpShow;
-+ use IpShow\IpShow;
+use IpShow\IpShow;
 
-// ... 其他内容 ...
+$ip = '1.1.1.1';
+$ipFinder = new IpShow();
+$location = $ipFinder->find($ip);
+
+if ($location) {
+    echo "国家: " . $location['country'] . "\n";
+    echo "省份: " . $location['province'] . "\n";
+    echo "城市: " . $location['city'] . "\n";
+} else {
+    echo "未找到此IP的位置信息\n";
+}
 ```

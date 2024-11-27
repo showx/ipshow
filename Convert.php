@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use IpShow\IpShow;
 
 // 使用IP查询
-$ipFinder = new IpShow('ip.bin');
+$ipFinder = new IpShow();
 // $ipFinder->setDebug(true);  // 需要调试时打开此行注释
 $ip = '113.88.209.42';
 // 查不到为null

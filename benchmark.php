@@ -32,7 +32,7 @@ function benchmark($testSize = 10000, $warmup = true) {
     echo "加载IP数据库...\n";
     $beforeLoad = memory_get_usage();
     $loadStart = microtime(true);
-    $ipFinder = new IpShow('ip.bin');
+    $ipFinder = new IpShow();
     $loadTime = (microtime(true) - $loadStart) * 1000000;
     $afterLoad = memory_get_usage();
     echo "数据库加载时间: " . formatTime($loadTime) . "\n";
