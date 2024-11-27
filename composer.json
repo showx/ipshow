@@ -1,0 +1,23 @@
+{
+    "name": "ipshow/ipshow",
+    "description": "A high-performance IP location lookup library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IpShow\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "show",
+            "email": "9448923@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    }
+} 
