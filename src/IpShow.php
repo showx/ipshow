@@ -117,6 +117,22 @@ class IpShow {
                     'province' => $this->getCityName($unpacked['province_code']),
                     'city' => $this->getCityName($unpacked['city_code'])
                 ];
+                // 兼容旧版
+                $result[0] = $result['country'];
+                $result[1] = $result['province'];
+                $result[2] = $result['city'];
+                $result[3] = "";
+                // array(4) {
+                //     [0]=>
+                //     string(6) "中国"
+                //     [1]=>
+                //     string(6) "广东"
+                //     [2]=>
+                //     string(6) "广州"
+                //     [3]=>
+                //     string(0) ""
+                //   }
+                  
                 return $result;
             }
         }
